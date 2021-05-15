@@ -1,0 +1,260 @@
+@import url(d:\advs-project\src\styles\header.css);
+@import url(d:\advs-project\src\styles\footer.css);
+@import url(d:\advs-project\src\styles\fonts.css);
+@import url(d:\advs-project\src\styles\shortClasses.css);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1366px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1366px;
+  min-width: 320px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.btn {
+  color: black;
+  background-color: transparent;
+  width: 5rem;
+  height: 2rem;
+  outline: none;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  box-shadow: inset 0px -2rem 0px 0px #000000;
+  color: white;
+}
+
+.input-cont {
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+
+.inside-icon {
+  position: absolute;
+  top: 25%;
+  right: 1vh;
+  cursor: pointer;
+  font-size: 1.5vh;
+  transition: 0.3s;
+}
+
+.pass-control {
+  font-size: 2vh;
+}
+
+.input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 2vh;
+  border-radius: 5px;
+  height: 3rem;
+  padding: 0 10% 0 10px;
+  outline: none;
+  border: 2px solid black;
+}
+
+.the-search-input {
+  min-width: 200px;
+  height: 2rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.inputs-container {
+  font-family: Alternates;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 560px;
+  min-width: 300px;
+  margin: 20vh auto 0;
+}
+
+.inputs-container form {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons .social-icon {
+  font-size: 2rem;
+  margin-right: 2vh;
+  cursor: pointer;
+  transition: 0.2s all;
+  color: black;
+}
+
+.social-icons .social-icon i {
+  transition: inherit;
+}
+
+.social-icons .social-icon:hover i {
+  transform: scale(1.2);
+}
+
+.social-icons .social-icon:hover .fa-facebook-f {
+  color: #4267b2;
+}
+
+.social-icons .social-icon:hover .fa-instagram {
+  color: #bb298e;
+}
+
+.social-icons .social-icon:hover .fa-twitter {
+  color: #1da1f2;
+}
+
+.social-icons .social-icon:hover .fa-youtube {
+  color: #ff0000;
+}
+
+.social-icons :last-child {
+  margin-right: 0;
+}
+
+.bottom-links {
+  padding-top: 2vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  position: relative;
+  transition: 0.2s;
+}
+
+.bottom-links a:before {
+  transition: 0.2s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 12.5%;
+  bottom: -2px;
+  border-bottom: 1px solid red;
+}
+
+.bottom-links a:hover {
+  color: grey;
+}
+
+.bottom-links a:hover:before {
+  width: 75%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Alternates;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  font-size: 1.5rem;
+}
+
+.label__checkbox {
+  display: none;
+}
+
+.label__check {
+  border-radius: 50%;
+  box-shadow: 0 0 6px inset #3a3a3a;
+  border: 1px solid black;
+  margin-right: 20px;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.label__check i.icon {
+  opacity: 0;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+.label__checkbox:checked + .label__text .label__check {
+  color: white;
+  text-shadow: 0 0 5px white;
+  box-shadow: 0 0 6px inset #830000;
+}
+
+.label__checkbox:checked + .label__text .label__check .icon {
+  color: black;
+  opacity: 1;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5vh;
+}
+
+.savemy {
+  color: black;
+  position: absolute;
+  left: 2rem;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .bottom-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-links :first-child {
+    margin-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
