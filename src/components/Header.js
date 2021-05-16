@@ -1,6 +1,7 @@
 import React from "react";
 import LogBtn from "./LogBtn";
 import SearchField from "./SearchField";
+import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
 
 const Header = () => {
@@ -13,7 +14,9 @@ const Header = () => {
           <i className="fas fa-plus plus"></i>
           Post an Ad
         </button>
-        <LogBtn></LogBtn>
+        <Link to="/login">
+          <LogBtn text="Sign in" type="button"></LogBtn>
+        </Link>
       </div>
     </header>
   );

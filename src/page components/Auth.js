@@ -2,6 +2,7 @@ import Logo from "../components/Logo";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SaveMe from "../components/SaveMe";
+import LogBtn from "../components/LogBtn";
 
 const Auth = () => {
   const [isSwitched, setIsSwitched] = useState(false);
@@ -44,9 +45,7 @@ const Auth = () => {
           ></i>
         </div>
         <SaveMe></SaveMe>
-        <button type="submit" className="btn btnEnter">
-          Log in
-        </button>
+        <LogBtn text={"Sign in"}></LogBtn>
       </form>
       <div className="bottom-links">
         <Link to="/registration">Don't have account yet?</Link>

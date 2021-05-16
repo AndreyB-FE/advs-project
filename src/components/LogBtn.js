@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const LogBtn = () => {
+const LogBtn = (props) => {
   return (
-    <Link to="/login">
-      <button type="button" className="btn reg">
-        Log in
-      </button>
-    </Link>
+    <button type={props.type} className="btn">
+      {props.text}
+    </button>
   );
 };
 
