@@ -1,76 +1,69 @@
 import Logo from "../components/Logo";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SaveMe from "../components/SaveMe";
 import LogBtn from "../components/LogBtn";
 
-class Auth extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      login: " ",
-      password: " ",
-      isVisisble: false,
-    };
-    this.changeHandler = this.changeHandler.bind(this);
-    this.clickHandler = this.clickHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
-  }
-  clickHandler() {
-    if (this.state.isVisisble) {
-      this.setState({ isVisisble: false });
+const Auth = () => {
+  const [log, setLog] = useState({ email: "", password: "" });
+  const [isSwitched, setIsSwitched] = useState(false);
+
+  const clickHandler = () => {
+    if (isSwitched) {
+      setIsSwitched(false);
     } else {
-      this.setState({ isVisisble: true });
+      setIsSwitched(true);
     }
-  }
-  changeHandler(e) {
+  };
+  const changeHandler = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
-  }
-  submitHandler(e) {
+    setLog({ ...log, [name]: value });
+  };
+  const submitHandler = (e) => {
+    console.log(log);
     e.preventDefault();
-  }
-  render() {
-    return (
-      <div className="inputs-container pw-1">
-        <Logo></Logo>
-        <form action="#" method="" id="loginForm" onSubmit={this.submitHandler}>
-          <div className="input-cont">
-            <input
-              type="text"
-              name="login"
-              placeholder="Login"
-              className="input"
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div className="input-cont">
-            <input
-              type={this.state.isVisisble ? "text" : "password"}
-              placeholder="Password"
-              name="password"
-              className="input"
-              id="passwordInput"
-              onChange={this.changeHandler}
-            />
-            <i
-              className={`inside-icon pass-control ${
-                this.state.isVisisble ? "far fa-eye-slash" : "far fa-eye"
-              }`}
-              id="passwordEye"
-              onClick={this.clickHandler}
-            ></i>
-          </div>
-          <SaveMe></SaveMe>
-          <LogBtn text={"Sign in"}></LogBtn>
-        </form>
-        <div className="bottom-links">
-          <Link to="/registration">Don't have account yet?</Link>
-          <Link to="/resetpass">Forgot your password?</Link>
+  };
+  return (
+    <div className="inputs-container pw-1">
+      <Logo></Logo>
+      <form action="#" method="" id="loginForm" onSubmit={submitHandler}>
+        <div className="input-cont">
+          <p className="input-label">Email</p>
+          <input
+            type="text"
+            name="email"
+            placeholder="Emal"
+            className="input"
+            onChange={changeHandler}
+          />
         </div>
+        <div className="input-cont">
+          <p className="input-label">Password</p>
+          <input
+            type={isSwitched ? "text" : "password"}
+            placeholder="Password"
+            name="password"
+            className="input"
+            id="passwordInput"
+            onChange={changeHandler}
+          />
+          <i
+            className={`inside-icon pass-control ${
+              isSwitched ? "far fa-eye" : "far fa-eye-slash"
+            }`}
+            id="passwordEye"
+            onClick={clickHandler}
+          ></i>
+        </div>
+        <SaveMe></SaveMe>
+        <LogBtn text={"Sign in"}></LogBtn>
+      </form>
+      <div className="bottom-links">
+        <Link to="/registration">Don't have account yet?</Link>
+        <Link to="/resetpass">Forgot your password?</Link>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Auth;
