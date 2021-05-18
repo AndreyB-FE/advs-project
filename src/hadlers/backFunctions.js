@@ -1,21 +1,32 @@
 const handleRegistration = (log) => {
-  let res = {
+  const URL = "http://localhost:8000/users";
+  let req = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(log),
   };
-  fetch("http://localhost:8000/users")
+
+  fetch(URL)
     .then((response) => response.json())
     .then((data) => {
-      if (isExists(data, log.email)) {
-        return "This email alredy exists";
-      } else {
-        fetch("http://localhost:8000/users", res).then(() => {
-          return "You are registred!";
-        });
+      return isExists(data, log.email);
+    })
+    .then((isExists) => {
+      if (isExists) console.log("Exists");
+      else {
+        fetch(URL, req)
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       }
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };
 

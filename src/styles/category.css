@@ -1,6 +1,6 @@
 .item {
   cursor: pointer;
-  max-width: 300px;
+  max-width: 400px;
   min-height: 250px;
   height: 100%;
   width: 100%;
@@ -10,6 +10,7 @@
   position: relative;
   border-radius: 10px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .item:hover:before {

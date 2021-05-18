@@ -48,20 +48,12 @@
       "id": 1
     },
     {
-      "email": "sobaka@mail.r",
-      "name": "andrei",
-      "surname": "bogushevich",
-      "password": "12345678",
-      "repPassword": "12345678",
+      "email": "awdawd@wd",
+      "name": "awdawda",
+      "surname": "awdawd",
+      "password": "123",
+      "repPassword": "123",
       "id": 2
-    },
-    {
-      "email": "sobaka@ma",
-      "name": "andrei",
-      "surname": "bogushevich",
-      "password": "12345678",
-      "repPassword": "12345678",
-      "id": 3
     }
   ]
 }

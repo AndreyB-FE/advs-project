@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import LogBtn from "../components/LogBtn";
@@ -15,6 +15,7 @@ const Registration = () => {
 
   const [isSwitched, setIsSwitched] = useState(false);
   const [isEqual, setIsEqual] = useState(true);
+
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setLog({ ...log, [name]: value });
@@ -23,16 +24,17 @@ const Registration = () => {
     if (!comparePasswords(log.password, log.repPassword)) {
       setIsEqual(false);
     } else {
-      setIsEqual(true);
       console.log(handleRegistration(log));
+      setIsEqual(true);
     }
+    setLog({ ...log });
     e.preventDefault();
   };
   const comparePasswords = (pass, repeat) => {
     if (pass !== repeat) return false;
     return true;
   };
-  // useEffect(() => {});
+  useEffect(() => {}, [log.password, log.repPassword]);
   return (
     <div className="inputs-container pw-1">
       <Logo></Logo>
@@ -44,6 +46,7 @@ const Registration = () => {
             name="email"
             placeholder="Email"
             className="input"
+            value={log.email}
             onChange={changeHandler}
           />
         </div>
@@ -54,6 +57,7 @@ const Registration = () => {
             name="name"
             placeholder="Name"
             className="input"
+            value={log.name}
             onChange={changeHandler}
           />
         </div>
@@ -64,6 +68,7 @@ const Registration = () => {
             name="surname"
             placeholder="Second name"
             className="input"
+            value={log.surname}
             onChange={changeHandler}
           />
         </div>
@@ -75,6 +80,7 @@ const Registration = () => {
             name="password"
             className="input"
             id="passwordInput"
+            value={log.password}
             onChange={changeHandler}
           />
           <i
@@ -101,6 +107,7 @@ const Registration = () => {
             name="repPassword"
             className="input"
             id="repPasswordInput"
+            value={log.repPassword}
             onChange={changeHandler}
           />
         </div>

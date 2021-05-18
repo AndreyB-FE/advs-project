@@ -1,8 +1,8 @@
-@import url(e:\advs-project\src\styles\header.css);
-@import url(e:\advs-project\src\styles\footer.css);
-@import url(e:\advs-project\src\styles\fonts.css);
-@import url(e:\advs-project\src\styles\shortClasses.css);
-@import url(e:\advs-project\src\styles\category.css);
+@import url(d:\advs-project\src\styles\header.css);
+@import url(d:\advs-project\src\styles\footer.css);
+@import url(d:\advs-project\src\styles\fonts.css);
+@import url(d:\advs-project\src\styles\shortClasses.css);
+@import url(d:\advs-project\src\styles\category.css);
 * {
   box-sizing: border-box;
   padding: 0;
