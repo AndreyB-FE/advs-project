@@ -27,6 +27,5 @@ yarn-error.log*
 
 .sass-cache/
 *.css.map
-*.sass
-*.scss
+
 

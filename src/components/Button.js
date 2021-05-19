@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogBtn = (props) => {
+const Button = (props) => {
   return (
     <button type={props.type} className="btn">
       {props.text}
@@ -8,4 +8,4 @@ const LogBtn = (props) => {
   );
 };
 
-export default LogBtn;
+export default Button;

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/category.scss";
 
 const Category = (props) => {
   const { name, description, image } = props;
@@ -9,7 +10,6 @@ const Category = (props) => {
     >
       <div className="name">{name}</div>
       <p className="description">{description}</p>
-      {/* <img src={image} alt="" /> */}
     </div>
   );
 };

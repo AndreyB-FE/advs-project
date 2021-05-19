@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../components/Logo";
-import LogBtn from "../components/LogBtn";
+import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
 const Confirmation = () => {
@@ -26,9 +26,9 @@ const Confirmation = () => {
           </div>
         </label>
         <div className="buttons">
-          <LogBtn text={"Confirm"} path="/resetpass"></LogBtn>
+          <Button text={"Confirm"} path="/resetpass"></Button>
           <Link to="/resetpass">
-            <LogBtn text="Resend"></LogBtn>
+            <Button text="Resend"></Button>
           </Link>
         </div>
       </form>

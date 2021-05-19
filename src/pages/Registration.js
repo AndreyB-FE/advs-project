@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
-import LogBtn from "../components/LogBtn";
-import handleRegistration from "../hadlers/backFunctions";
+import Button from "../components/Button";
+import handleRegistration from "../handlers/backFunctions";
 
 const Registration = () => {
   const [log, setLog] = useState({
@@ -111,7 +111,7 @@ const Registration = () => {
             onChange={changeHandler}
           />
         </div>
-        <LogBtn text="Sign up"></LogBtn>
+        <Button text="Sign up"></Button>
       </form>
       <div className="bottom-links">
         <Link to="/login">Back to Login page</Link>

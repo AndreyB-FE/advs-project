@@ -1,8 +1,9 @@
 import React from "react";
-import LogBtn from "./LogBtn";
+import Button from "./Button";
 import SearchField from "./SearchField";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
+import "../styles/header.scss";
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
           Post an Ad
         </button>
         <Link to="/login">
-          <LogBtn text="Sign in" type="button"></LogBtn>
+          <Button text="Sign in" type="button"></Button>
         </Link>
       </div>
     </header>

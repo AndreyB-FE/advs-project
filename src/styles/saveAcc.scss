@@ -1,0 +1,53 @@
+.save-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+  .checkbox {
+    display: none;
+    &:checked {
+      + .back-checkbox {
+        color: white;
+        text-shadow: 0 0 5px white;
+        box-shadow: 0 0 6px inset rgb(131, 0, 0);
+        .icon {
+          color: black;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .back-checkbox {
+    border-radius: 50%;
+    box-shadow: 0 0 6px inset rgb(58, 58, 58);
+    border: 1px solid black;
+    margin-right: 20px;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    .icon {
+      opacity: 0;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    p {
+      color: black;
+      font-weight: 500;
+      position: absolute;
+      left: 2rem;
+      font-size: 0.8em;
+      text-align: center;
+      transition: 0.2s;
+    }
+    &:hover {
+      border: 1px solid rgb(131, 0, 0);
+      p {
+        color: gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.social-icons {
+  display: flex;
+  .social-icon {
+    font-size: 2rem;
+    margin-right: 2vh;
+    cursor: pointer;
+    transition: 0.2s all;
+    color: black;
+    i {
+      transition: inherit;
+    }
+    &:hover {
+      i {
+        transform: scale(1.2);
+      }
+      .fa-facebook-f {
+        color: #4267b2;
+      }
+      .fa-instagram {
+        color: #bb298e;
+      }
+      .fa-twitter {
+        color: #1da1f2;
+      }
+      .fa-youtube {
+        color: #ff0000;
+      }
+    }
+  }
+  :last-child {
+    margin-right: 0;
+  }
+}

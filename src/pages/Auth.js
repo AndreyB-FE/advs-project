@@ -1,8 +1,8 @@
 import Logo from "../components/Logo";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SaveMe from "../components/SaveMe";
-import LogBtn from "../components/LogBtn";
+import SaveAcc from "../components/SaveAcc";
+import Button from "../components/Button";
 
 const Auth = () => {
   const [log, setLog] = useState({ email: "", password: "" });
@@ -55,8 +55,8 @@ const Auth = () => {
             onClick={clickHandler}
           ></i>
         </div>
-        <SaveMe></SaveMe>
-        <LogBtn text={"Sign in"}></LogBtn>
+        <SaveAcc></SaveAcc>
+        <Button text={"Sign in"}></Button>
       </form>
       <div className="bottom-links">
         <Link to="/registration">Don't have account yet?</Link>

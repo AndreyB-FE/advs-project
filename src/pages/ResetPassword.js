@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../components/Logo";
-import LogBtn from "../components/LogBtn";
+import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
 const ResetPassword = () => {
@@ -17,7 +17,7 @@ const ResetPassword = () => {
           />
         </div>
         <Link to="/resetpass/confirmation">
-          <LogBtn text="Reset"></LogBtn>
+          <Button text="Reset"></Button>
         </Link>
       </form>
       <div className="bottom-links">
