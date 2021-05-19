@@ -1,0 +1,17 @@
+.btn {
+  color: black;
+  background-color: transparent;
+  width: 5rem;
+  height: 2rem;
+  outline: none;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+.btn:hover {
+  box-shadow: inset 0px -2rem 0px 0px #000000;
+  color: white;
+}

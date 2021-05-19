@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/navLinks.scss";
 
 const NavLinks = () => {
   const navLinks = ["About", "Contact Us", "Categories"];

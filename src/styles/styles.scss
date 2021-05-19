@@ -1,5 +1,6 @@
 @import "./fonts.scss";
 @import "./shortClasses.scss";
+@import "./reset.scss";
 
 * {
   box-sizing: border-box;
@@ -49,51 +50,10 @@ a {
   color: black;
 }
 
-.logo {
-  cursor: pointer;
-}
-
-.btn {
-  color: black;
-  background-color: transparent;
-  width: 5rem;
-  height: 2rem;
-  outline: none;
-  border: 2px solid black;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: inherit;
-  transition: 0.2s;
-  margin-right: 10px;
-}
-.btn:hover {
-  box-shadow: inset 0px -2rem 0px 0px #000000;
-  color: white;
-}
-
-.big-btn {
-  font-family: inherit;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: black;
-  background-color: transparent;
-  outline: none;
-  border: 2px solid black;
-  cursor: pointer;
-  transition: 0.2s;
-  &:hover {
-    box-shadow: inset 0px -2.5rem 0px 0px #000000;
-    color: white;
-  }
-}
-
 .input-cont {
   width: 100%;
   position: relative;
   margin: 10px 0;
-  // display: flex;
-  // justify-content: center;
-  // margin-bottom: 2vh;
 }
 .input-label {
   font-family: NotoSansJP;
@@ -105,9 +65,7 @@ a {
   bottom: 1.5vh;
   right: 1vh;
   cursor: pointer;
-  // display: inline-block;
   font-size: 1.5vh;
-  // color: #ffffff6b;
   transition: 0.3s;
 }
 .pass-control {
@@ -187,14 +145,6 @@ a {
       }
     }
   }
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-family: Alternates;
-  border-bottom: 1px solid red;
-  border-top: 1px solid red;
-  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
