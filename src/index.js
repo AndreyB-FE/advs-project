@@ -1,4 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/styles.scss";
+import ReactRouter from "./ReactRouter";
 
-ReactDOM.render(<h1>hello</h1>, document.getElementById('root'));
+ReactDOM.render(<ReactRouter></ReactRouter>, document.getElementById("root"));
